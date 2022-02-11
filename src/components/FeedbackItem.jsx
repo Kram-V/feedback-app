@@ -17,12 +17,12 @@ const FeedbackItem = () => {
 
           <div className="edit-delete-icons">
             <i
-              class="fa fa-pencil-square-o edit-icon"
+              className="fa fa-pencil-square-o edit-icon"
               onClick={() => editFeedBack(feedBack)}
             ></i>
 
             <i
-              class="fa fa-times delete-icon"
+              className="fa fa-times delete-icon"
               onClick={() => deleteFeedBack(feedBack.id)}
             ></i>
           </div>

@@ -3,12 +3,20 @@ import FeedbackItem from "./FeedbackItem";
 import FeedBackContext from "../context/FeedbackContext";
 
 const FeedbackList = () => {
-  const { feedBackData } = useContext(FeedBackContext);
+  const { feedBackData, isLoading } = useContext(FeedBackContext);
 
-  if (!feedBackData || feedBackData.length === 0) {
+  if (!isLoading && (!feedBackData || feedBackData.length === 0)) {
     return (
       <div className="no-feedback-text">
         <h1>No Feedbacks Show</h1>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="loading-text">
+        <h1>Loading...</h1>
       </div>
     );
   }

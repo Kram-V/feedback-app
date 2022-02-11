@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import Card from "./shared/Card";
 import Rating from "./Rating";
 import FeedBackContext from "../context/FeedbackContext";
@@ -33,7 +33,9 @@ const FeedbackForm = () => {
     setReview("");
 
     const newInput = {
-      id: uuidv4(),
+      // WITHOUT SERVER
+      // id: uuidv4(),
+
       description: review,
       rating,
     };

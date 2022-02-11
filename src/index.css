@@ -118,7 +118,8 @@ FEEDBACK LIST */
   cursor: pointer;
 }
 
-.no-feedback-text {
+.no-feedback-text,
+.loading-text {
   text-align: center;
   margin-top: 40px;
 }

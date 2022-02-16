@@ -15,7 +15,7 @@ export const FeedBackProvider = ({ children }) => {
   useEffect(() => {
     const fetchFeedBackData = async () => {
       const result = await axios.get(
-        "https://feed-back-api.herokuapp.com/feedbacks"
+        "https://feed-back-api.herokuapp.com/feedbacks?_sort=id&_order=desc"
       );
 
       setFeedBackData(result.data);

@@ -10,6 +10,8 @@ const FeedbackForm = () => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState(0);
 
+  console.log(feedBackEdit);
+
   useEffect(() => {
     if (feedBackEdit.edit === true) {
       setRating(feedBackEdit.item.rating);
@@ -47,9 +49,8 @@ const FeedbackForm = () => {
     addFeedBack(newInput);
   };
 
-  const disablerBtn = review.length < 10 ? true : false;
-  const charactersText =
-    review.length < 10 ? "( Minimum of 10 characters )" : "";
+  const disablerBtn = review.length < 5 ? true : false;
+  const charactersText = review.length < 5 ? "( Minimum of 5 characters )" : "";
 
   return (
     <div className="feedback-form-container">
